@@ -23,8 +23,19 @@
       href="images/favicon-16x16.png"
     />
     <link rel="manifest" href="/manifest.json" />
+    <script src="Request.js"></script>
   </head>
   <body>
-    <script src="Request.js"></script>
+    <h1>Game Planning App</h1>
+    <h2>Data from index.php endpoint:</h2>
+    <p id="index"></p>
+    <script>
+      Request("index");
+    </script>
+    <h2>Data from database-test.php endpoint:</h2>
+    <p id="database-test"></p>
+    <script>
+      Request("database-test");
+    </script>
   </body>
 </html>
