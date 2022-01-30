@@ -1,4 +1,4 @@
-function Request() {
+function Request(endPoint) {
   // localDevelopment:
   // set to 1 for local development environment
   // set to 0 for production environment
@@ -7,19 +7,21 @@ function Request() {
   // For production site
   if (localDevelopment === 1) {
     var baseURL = "http://localhost:4000/api/";
-    var url = baseURL + "data.php";
+    var url = baseURL + endPoint + ".php";
   } else {
     var baseURL =
       "http://ec2-184-73-147-183.compute-1.amazonaws.com/back-end/api/";
-    var url = baseURL + "data.php";
+    var url = baseURL + endPoint + ".php";
   }
 
-  const body = document.querySelector("body");
+  var targetElement = "#" + endPoint;
+  var parentElement = document.querySelector(targetElement);
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
     var name = parsedData.name;
-    body.innerText = name;
+    parentElement.innerText = name;
+    return name;
   };
 
   const updateUIError = function (error) {
@@ -43,5 +45,3 @@ function Request() {
 
   createRequest(url, updateUISuccess, updateUIError);
 }
-
-Request();
