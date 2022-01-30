@@ -1,15 +1,19 @@
 function Request() {
   // For production site
-  // const baseURL =
-  //   "http://ec2-184-73-147-183.compute-1.amazonaws.com/back-end/api/";
-  // const url = baseURL + "data.php";
+  const baseURL =
+    "http://ec2-184-73-147-183.compute-1.amazonaws.com/back-end/api/";
+  var url = baseURL + "data.php";
 
-  // For local development
-  const url = "http://localhost:4000/api/data.php";
+  // const baseURL = "http://localhost:4000/api/";
+  // var url = baseURL + "data.php";
+  // ^ For local development
+
+  const body = document.querySelector("body");
 
   const updateUISuccess = function (data) {
-    console.log(data);
-    return data;
+    const parsedData = JSON.parse(data);
+    var name = parsedData.name;
+    body.innerText = name;
   };
 
   const updateUIError = function (error) {
@@ -34,5 +38,4 @@ function Request() {
   createRequest(url, updateUISuccess, updateUIError);
 }
 
-const data = Request();
-console.log(data);
+Request();
