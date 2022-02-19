@@ -11,6 +11,7 @@ function Request(endPoint) {
   } else {
     var baseURL = "https://api.gameplanning.site/";
     var url = baseURL + endPoint + ".php";
+    console.log(url);
   }
 
   var targetElement = "#" + endPoint;
@@ -18,9 +19,9 @@ function Request(endPoint) {
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    var name = parsedData.name;
-    parentElement.innerText = name;
-    return name;
+    var value = parsedData.value;
+    parentElement.innerText = value;
+    return value;
   };
 
   const updateUIError = function (error) {
