@@ -2,15 +2,14 @@ function Request(endPoint) {
   // localDevelopment:
   // set to 1 for local development environment
   // set to 0 for production environment
-  const localDevelopment = 1;
+  const localDevelopment = 0;
 
   // For production site
   if (localDevelopment === 1) {
     var baseURL = "http://localhost:4000/api/";
     var url = baseURL + endPoint + ".php";
   } else {
-    var baseURL =
-      "http://ec2-184-73-147-183.compute-1.amazonaws.com/back-end/api/";
+    var baseURL = "http://api.gameplanning.site/";
     var url = baseURL + endPoint + ".php";
   }
 
