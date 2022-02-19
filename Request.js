@@ -9,7 +9,7 @@ function Request(endPoint) {
     var baseURL = "http://localhost:4000/api/";
     var url = baseURL + endPoint + ".php";
   } else {
-    var baseURL = "http://api.gameplanning.site/";
+    var baseURL = "https://api.gameplanning.site/";
     var url = baseURL + endPoint + ".php";
   }
 
