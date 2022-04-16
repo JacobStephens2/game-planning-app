@@ -1,17 +1,11 @@
 function Request(endPoint) {
-  // localDevelopment:
-  // set to 1 for local development environment
-  // set to 0 for production environment
-  const localDevelopment = 0;
-
-  // For production site
-  if (localDevelopment === 1) {
-    var baseURL = "http://localhost:4000/api/";
-    var url = baseURL + endPoint + ".php";
-  } else {
+  if (window.location.host === "gameplanning.site") {
     var baseURL = "https://api.gameplanning.site/";
     var url = baseURL + endPoint + ".php";
     console.log(url);
+  } else {
+    var baseURL = "http://api.gameplanning.local/";
+    var url = baseURL + endPoint + ".php";
   }
 
   var targetElement = "#" + endPoint;
