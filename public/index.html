@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="This site helps people manage their plans for presenting games at events"
-    />
-    <title>Game Planning App</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <script src="Request.js"></script>
-  </head>
-  <body>
-    <h1>Game Planning App</h1>
 
-    <h2>Data from index.php endpoint:</h2>
-    <p id="index"></p>
-    <script>
-      Request("index");
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This site helps people manage their plans for presenting games at events" />
+  <title>Game Planning App</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <script src="Request.js"></script>
+</head>
 
-    <h2>Data from database-test.php endpoint:</h2>
-    <p id="database-test"></p>
-    <script>
-      Request("database-test");
-    </script>
+<body>
+  <h1>Game Planning App</h1>
 
-    <h2>Data from game.php endpoint:</h2>
-    <p id="game"></p>
-    <script>
-      Request("game");
-    </script>
+  <h2>Data from index.php endpoint:</h2>
+  <p id="index"></p>
+  <script>
+    Request("index");
+  </script>
 
-    <a href="https://github.com/JacobStephens2/game-planning-front-end">
-      <p>GitHub</p>
-    </a>
-  </body>
+  <h2>Data from database-test.php endpoint:</h2>
+  <p id="database-test"></p>
+  <script>
+    Request("database-test");
+  </script>
+
+  <h2>Data from game.php endpoint:</h2>
+  <p id="game"></p>
+  <script>
+    Request("game");
+  </script>
+
+  <a href="/login.html">
+    <p>Login</p>
+  </a>
+
+  <a href="/sign-up.html">
+    <p>Sign Up</p>
+  </a>
+
+  <a href="https://github.com/JacobStephens2/game-planning-front-end">
+    <p>GitHub</p>
+  </a>
+</body>
+
 </html>
