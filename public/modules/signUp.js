@@ -12,9 +12,9 @@ const updateUIError = function (error) {
 
 const createRequest = function (url, succeed, fail) {
   fetch(url)
-    .then((response) => handleErrors(response))
-    .then((data) => succeed(data))
-    .catch((error) => fail(error));
+    .then(response => handleErrors(response))
+    .then(data => succeed(data))
+    .catch(error => fail(error));
 };
 
 createRequest(apiHostname, updateUISuccess, updateUIError);
