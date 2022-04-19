@@ -10,5 +10,13 @@ input[type="submit"] {
 }
 
 body {
-  margin: 0 0.8rem;
+  margin: 0.8rem;
+}
+
+nav {
+  max-width: 75ch;
+}
+
+nav>a {
+  margin-right: 1.1rem;
 }
