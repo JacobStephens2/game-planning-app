@@ -2,7 +2,6 @@ function Request(endPoint) {
   if (window.location.host === "gameplanning.site") {
     var baseURL = "https://api.gameplanning.site/";
     var url = baseURL + endPoint + ".php";
-    console.log(url);
   } else {
     var baseURL = "http://api.gameplanning.local/";
     var url = baseURL + endPoint + ".php";
