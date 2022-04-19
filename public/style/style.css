@@ -1,0 +1,14 @@
+/* Custom CSS */
+
+input {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+}
+
+body {
+  margin: 0 0.8rem;
+}
