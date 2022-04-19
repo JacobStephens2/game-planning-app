@@ -1,6 +1,10 @@
 import { apiHostname } from '/modules/apiHostname.js';
 import { handleErrors } from '/modules/handleErrors.js';
 
+document.querySelector('input[type="submit"]').addEventListener('click', function (event) {
+  event.preventDefault()
+});
+
 let requestURL = apiHostname + 'login.php';
 
 const createRequest = function (url, succeed, fail) {
