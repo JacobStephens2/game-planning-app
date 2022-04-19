@@ -9,8 +9,8 @@ var form = document.createElement("form");
 body.appendChild(form);
 const LoginForm = document.querySelector("form");
 
-const input = document.createElement("input");
-for (let index = 0; index < 2; index++) {
-  console.log([index]);
-  LoginForm.append(input);
+for (let i = 0; i < 2; i++) {
+  const input = [];
+  input[i] = document.createElement("input");
+  LoginForm.append(input[i]);
 }
