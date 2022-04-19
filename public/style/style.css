@@ -17,7 +17,8 @@ nav {
   max-width: 75ch;
 }
 
-nav>a {
+nav>a,
+footer>a {
   margin-right: 1.1rem;
 }
 
