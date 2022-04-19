@@ -1,5 +1,3 @@
-
-
 const createRequest = function (url, succeed, fail) {
   fetch(url)
     .then((response) => handleErrors(response))
