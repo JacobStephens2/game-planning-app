@@ -3,10 +3,12 @@
 input {
   display: block;
   margin-bottom: 0.7rem;
+  width: 30ch;
 }
 
 input[type="submit"] {
   margin-top: 1rem;
+  width: max-content;
 }
 
 body {
