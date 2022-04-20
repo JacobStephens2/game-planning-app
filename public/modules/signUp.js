@@ -4,11 +4,17 @@ let signUpEndpoint = apiHostname + 'sign-up.php';
 
 document.querySelector('input[type="submit"]').addEventListener('click', function (event) {
   event.preventDefault()
-  let email = document.querySelector('input[type="email"]').value;
-  let password = document.querySelector('input[type="password"]').value;
   let data = {};
-  data.email = email;
-  data.password = password;
+  data.email = document.querySelector('input[type="email"]').value;
+  data.password = document.querySelector('input[type="password"]').value;
+
+  function appendToPage(data) {
+    let paragraph = document.createElement('p');
+    paragraph.innerText = data;
+    document.querySelector('body').append(paragraph);
+    console.log('appendToPage() run with data: ' + data);
+  }
+
   fetch(signUpEndpoint, {
     method: 'POST',
     credentials: 'include',
@@ -20,4 +26,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error));
+
+  appendToPage(data.message);
+
 });
