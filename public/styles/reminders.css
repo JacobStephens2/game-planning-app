@@ -28,9 +28,9 @@ links:
 
 category: navigation
 */
-/* nav ul {
+nav ul {
   list-style: none;
-} */
+}
 
 /* @docs
 label: List Voiceover
@@ -44,10 +44,10 @@ links:
 
 category: navigation
 */
-/* nav li:before {
+nav li:before {
   content: "\200B";
   position: absolute;
-} */
+}
 
 /* @docs
 label: Reduced Motion
@@ -61,7 +61,7 @@ links:
 
 category: accessibility
 */
-/* @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
 
   *,
   ::before,
@@ -74,7 +74,7 @@ category: accessibility
     transition-delay: 0s !important;
     transition-duration: 0s !important;
   }
-} */
+}
 
 /* @docs
 label: Line Heights
