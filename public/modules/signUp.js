@@ -1,4 +1,6 @@
 import { apiHostname } from '/modules/apiHostname.js';
+import { handleErrors } from '/modules/handleErrors.js';
+import { updateUIError } from '/modules/updateUIError.js';
 
 let signUpEndpoint = apiHostname + 'sign-up.php';
 
@@ -8,25 +10,28 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
   data.email = document.querySelector('input[type="email"]').value;
   data.password = document.querySelector('input[type="password"]').value;
 
-  function appendToPage(data) {
+  const updateUISuccess = function (data) {
+    const parsedData = JSON.parse(data);
+    var message = parsedData.message;
     let paragraph = document.createElement('p');
-    paragraph.innerText = data;
+    paragraph.innerText = parsedData;
     document.querySelector('body').append(paragraph);
-    console.log('appendToPage() run with data: ' + data);
   }
 
-  fetch(signUpEndpoint, {
-    method: 'POST',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+  const createRequest = function (url, succeed, fail) {
+    fetch(url, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then((response) => handleErrors(response))
+      .then((data) => succeed(data))
+      .catch((error) => fail(error));
+  };
 
-  appendToPage(data.message);
+  createRequest(signUpEndpoint, updateUISuccess, updateUIError);
 
 });
