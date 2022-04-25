@@ -12,7 +12,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    document.querySelector('form+p').innerText = parsedData;
+    document.querySelector('form+p').innerText = parsedData.message;
   }
 
   const createRequest = function (url, succeed, fail) {
