@@ -12,11 +12,23 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    document.querySelector('form+p').innerText = parsedData.logged_in;
     if (parsedData.logged_in == 'true') {
-      localStorage.setItem('loggedIn', 'true');
+
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      setCookie('loggedIn', 'true', 1);
+
+      // reload page to show logged in state
+      window.location = window.location;
+
+    } else {
+      document.querySelector('form+p').innerText = parsedData.message;
     }
-    window.location = window.location;
   }
 
   const createRequest = function (url, succeed, fail) {
