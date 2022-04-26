@@ -12,7 +12,11 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    document.querySelector('form+p').innerText = parsedData.message;
+    document.querySelector('form+p').innerText = parsedData.logged_in;
+    if (parsedData.logged_in == 'true') {
+      localStorage.setItem('loggedIn', 'true');
+    }
+    window.location = window.location;
   }
 
   const createRequest = function (url, succeed, fail) {
