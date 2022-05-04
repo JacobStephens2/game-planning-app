@@ -1,4 +1,4 @@
-import { cookieMethods } from "./cookieMethods";
+import { cookieMethods } from "/modules/cookieMethods.js";
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   function logout() {
