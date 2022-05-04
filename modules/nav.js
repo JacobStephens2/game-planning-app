@@ -3,11 +3,11 @@ import { cookieMethods } from "./cookieMethods";
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   function logout() {
     document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location = "/login.html";
+    window.location = "/login";
   }
   document.querySelector('nav').innerHTML = `
-  <a href="/index.html">Game Planning App</a>
-  <a href="/games.html">Games</a>
+  <a href="/">Game Planning App</a>
+  <a href="/games">Games</a>
   `;
   let button = document.createElement('button');
   button.innerText = 'Logout';
@@ -16,8 +16,8 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
 
 } else {
   document.querySelector('nav').innerHTML = `
-  <a href="/index.html">Game Planning App</a>
-  <a href="/sign-up.html">Sign Up</a>
-  <a href="/login.html">Login</a>
+  <a href="/index">Game Planning App</a>
+  <a href="/sign-up">Sign Up</a>
+  <a href="/login">Login</a>
   `;
 }
