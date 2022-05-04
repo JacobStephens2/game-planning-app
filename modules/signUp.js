@@ -2,7 +2,7 @@ import { apiHostname } from '/modules/apiHostname.js';
 import { handleErrors } from '/modules/handleErrors.js';
 import { updateUIError } from '/modules/updateUIError.js';
 
-let signUpEndpoint = apiHostname + 'sign-up.php';
+let signUpEndpoint = apiHostname + 'sign-up';
 
 document.querySelector('input[type="submit"]').addEventListener('click', function (event) {
   event.preventDefault()

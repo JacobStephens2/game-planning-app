@@ -4,7 +4,7 @@ function Request(endPoint) {
   } else {
     var baseURL = "http://api.gameplanning.local/";
   }
-  var url = baseURL + endPoint + ".php";
+  var url = baseURL + endPoint;
 
   var targetElement = "#" + endPoint;
   var parentElement = document.querySelector(targetElement);
