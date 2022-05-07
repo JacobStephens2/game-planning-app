@@ -9,7 +9,7 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   window.location = '/login';
 }
 
-let signUpEndpoint = apiHostname + 'games';
+let signUpEndpoint = apiHostname + 'access';
 
 const createRequest = function (url, succeed, fail) {
   fetch(url, {

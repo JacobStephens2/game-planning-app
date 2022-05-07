@@ -7,7 +7,7 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   }
   document.querySelector('nav').innerHTML = `
   <a href="/">Game Planning App</a>
-  <a href="/games">Games</a>
+  <a href="/access">Access</a>
   `;
   let button = document.createElement('button');
   button.innerText = 'Logout';
