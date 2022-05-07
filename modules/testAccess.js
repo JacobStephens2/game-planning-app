@@ -9,7 +9,7 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   window.location = '/login';
 }
 
-let signUpEndpoint = apiHostname + 'access';
+let endpoint = apiHostname + '/test/access';
 
 const createRequest = function (url, succeed, fail) {
   fetch(url, {
@@ -29,4 +29,4 @@ const updateUISuccess = function (data) {
   document.querySelector('span+span').innerText = parsedData.email;
 }
 
-createRequest(signUpEndpoint, updateUISuccess, updateUIError);
+createRequest(endpoint, updateUISuccess, updateUIError);

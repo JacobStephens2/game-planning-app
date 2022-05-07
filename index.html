@@ -13,18 +13,10 @@
 
   <h1>Get Ready To Play</h1>
 
-  <script src="/components/request.js"></script>
-  <h2>Data from base endpoint:</h2>
-  <p id="index"></p>
-  <script>
-    Request("index");
-  </script>
-
-  <h2>Data from /database endpoint:</h2>
-  <p id="database"></p>
-  <script>
-    Request("database");
-  </script>
+  <p>
+    Data from /test/database endpoint: <span id="database"></span>
+  </p>
+  <script type="module" src="/modules/testDatabase.js"></script>
 
   <footer>
     <script src="/components/footer.js"></script>
