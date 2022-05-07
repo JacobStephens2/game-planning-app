@@ -1,13 +1,13 @@
-import { apiHostname } from '/modules/apiHostname.js';
-import { handleErrors } from '/modules/handleErrors.js';
-import { updateUIError } from '/modules/updateUIError.js';
+import { apiHostname } from '/modules/exports/apiHostname.js';
+import { handleErrors } from '/modules/exports/handleErrors.js';
+import { updateUIError } from '/modules/exports/updateUIError.js';
 
 let endpoint = apiHostname + '/test/database';
 
 const updateUISuccess = function (data) {
   const parsedData = JSON.parse(data);
   var value = parsedData.value;
-  document.querySelector("#database").innerText = value;
+  document.querySelector('span').innerText = value;
   return value;
 };
 

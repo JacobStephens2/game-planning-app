@@ -1,7 +1,7 @@
-import { cookieMethods } from "./cookieMethods.js";
-import { apiHostname } from '/modules/apiHostname.js';
-import { handleErrors } from '/modules/handleErrors.js';
-import { updateUIError } from '/modules/updateUIError.js';
+import { cookieMethods } from "/modules/exports/cookieMethods.js";
+import { apiHostname } from '/modules/exports/apiHostname.js';
+import { handleErrors } from '/modules/exports/handleErrors.js';
+import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   console.log('You are logged in');
@@ -26,7 +26,7 @@ const createRequest = function (url, succeed, fail) {
 
 const updateUISuccess = function (data) {
   const parsedData = JSON.parse(data);
-  document.querySelector('span+span').innerText = parsedData.email;
+  document.querySelector('span').innerText = parsedData.email;
 }
 
 createRequest(endpoint, updateUISuccess, updateUIError);

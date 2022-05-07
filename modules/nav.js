@@ -1,4 +1,4 @@
-import { cookieMethods } from "/modules/cookieMethods.js";
+import { cookieMethods } from "/modules/exports/cookieMethods.js";
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   function logout() {
@@ -7,7 +7,7 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   }
   document.querySelector('nav').innerHTML = `
   <a href="/">Game Planning App</a>
-  <a href="/access">Access</a>
+  <a href="/test/access">Access</a>
   `;
   let button = document.createElement('button');
   button.innerText = 'Logout';

@@ -1,8 +1,8 @@
-import { apiHostname } from '/modules/apiHostname.js';
-import { handleErrors } from '/modules/handleErrors.js';
-import { updateUIError } from '/modules/updateUIError.js';
+import { apiHostname } from '/modules/exports/apiHostname.js';
+import { handleErrors } from '/modules/exports/handleErrors.js';
+import { updateUIError } from '/modules/exports/updateUIError.js';
 
-let signUpEndpoint = apiHostname + 'sign-up';
+let signUpEndpoint = apiHostname + '/login';
 
 document.querySelector('input[type="submit"]').addEventListener('click', function (event) {
   event.preventDefault()
@@ -12,7 +12,23 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    document.querySelector('form+p').innerText = parsedData;
+    if (parsedData.logged_in == 'true') {
+
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      setCookie('loggedIn', 'true', 1);
+
+      // reload page to show logged in state
+      window.location = '/test/access';
+
+    } else {
+      document.querySelector('form+p').innerText = parsedData.message;
+    }
   }
 
   const createRequest = function (url, succeed, fail) {
