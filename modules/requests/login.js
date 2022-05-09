@@ -24,7 +24,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
       setCookie('loggedIn', 'true', 1);
 
       // reload page to show logged in state
-      window.location = '/views/read/games';
+      window.location = '/views/games/read';
 
     } else {
       document.querySelector('form+p').innerText = parsedData.message;

@@ -5,7 +5,6 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   // Menu when logged in
   document.querySelector('nav').innerHTML = `
   <a href="/">Game Planning App</a>
-  <a href="/views/test/access">Access</a>
   <a href="/views/games/read">Games</a>
   `;
   let button = document.createElement('button');
