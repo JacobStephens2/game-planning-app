@@ -11,4 +11,5 @@ document.querySelector('head').innerHTML = `
   <link rel="stylesheet" href="/styles/vendor/remedy.css">
   <link rel="stylesheet" href="/styles/vendor/reminders.css">
   <link rel="stylesheet" href="/styles/style.css">
+  <title>Page</title>
 `;
