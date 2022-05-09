@@ -8,6 +8,15 @@ if (cookieMethods.getCookie('loggedIn') == 'true') {
   window.location = '/views/login';
 }
 
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+if (urlParams.get('message')) {
+  let message = urlParams.get('message');
+  let messageBox = document.createElement('p');
+  messageBox.innerText = message;
+  document.querySelector('h1').after(messageBox);
+}
+
 let endpoint = apiHostname + '/games/read';
 
 const createRequest = function (url, succeed, fail) {
@@ -36,3 +45,4 @@ const updateUISuccess = function (data) {
 }
 
 createRequest(endpoint, updateUISuccess, updateUIError);
+
