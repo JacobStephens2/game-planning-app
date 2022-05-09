@@ -28,7 +28,7 @@ const updateUISuccess = function (data) {
   for (let i in parsedData) {
     let li = document.createElement('li');
     li.innerHTML =
-      `<a href="/game/update?id=${parsedData[i].id}">` +
+      `<a href="/game/edit?id=${parsedData[i].id}">` +
       parsedData[i].title +
       `</a>`;
     document.querySelector('ul').append(li);
