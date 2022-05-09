@@ -4,7 +4,6 @@ import { handleErrors } from '/modules/exports/handleErrors.js';
 import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
-  console.log('You are logged in');
 } else {
   window.location = '/login';
 }
@@ -28,11 +27,10 @@ const updateUISuccess = function (data) {
   const parsedData = JSON.parse(data);
   for (let i in parsedData) {
     let li = document.createElement('li');
-    li.innerHTML = parsedData[i].title +
-      ': ' +
-      `<a href="/game/update?id=${parsedData[i].id}&title=${parsedData[i].title}">
-        Update
-      </a>`;
+    li.innerHTML =
+      `<a href="/game/update?id=${parsedData[i].id}">` +
+      parsedData[i].title +
+      `</a>`;
     document.querySelector('ul').append(li);
   }
 }
