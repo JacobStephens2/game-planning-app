@@ -1,5 +1,5 @@
 import { cookieMethods } from "/modules/exports/cookieMethods.js";
-import { logout } from "/modules/exports/logout.js";
+import { logout } from "/modules/requests/logout.js";
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   // Menu when logged in
