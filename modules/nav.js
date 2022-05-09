@@ -1,11 +1,8 @@
 import { cookieMethods } from "/modules/exports/cookieMethods.js";
+import { logout } from "/modules/exports/logout.js";
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
   // Menu when logged in
-  function logout() {
-    document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location = "/login";
-  }
   document.querySelector('nav').innerHTML = `
   <a href="/">Game Planning App</a>
   <a href="/test/access">Access</a>
