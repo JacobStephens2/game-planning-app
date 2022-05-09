@@ -4,7 +4,6 @@ import { handleErrors } from '/modules/exports/handleErrors.js';
 import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
-  console.log('You are logged in');
 } else {
   window.location = '/login';
 }
