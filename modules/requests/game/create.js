@@ -1,3 +1,4 @@
+import { cookieMethods } from "/modules/exports/cookieMethods.js";
 import { apiHostname } from '/modules/exports/apiHostname.js';
 import { handleErrors } from '/modules/exports/handleErrors.js';
 import { updateUIError } from '/modules/exports/updateUIError.js';
