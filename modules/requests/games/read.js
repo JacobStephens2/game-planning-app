@@ -5,7 +5,7 @@ import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
 } else {
-  window.location = '/login';
+  window.location = '/views/login';
 }
 
 let endpoint = apiHostname + '/games/read';
@@ -28,7 +28,7 @@ const updateUISuccess = function (data) {
   for (let i in parsedData) {
     let li = document.createElement('li');
     li.innerHTML =
-      `<a href="/game/edit?id=${parsedData[i].id}">` +
+      `<a href="views/game/edit?id=${parsedData[i].id}">` +
       parsedData[i].title +
       `</a>`;
     document.querySelector('ul').append(li);

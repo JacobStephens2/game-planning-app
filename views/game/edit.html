@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-  <script type="module" src="/modules/components/head.js">
-    document.querySelector('title').value = 'Create';
-  </script>
+  <script type="module" src="/modules/components/head.js"></script>
+  <title>Game</title>
 </head>
 
 <body>
@@ -20,7 +19,8 @@
     <input type="text" name="game[title]" value="Title" id="title">
     <input type="submit" value="Update">
   </form>
-  <p>&ensp;</p>
+  <a id="deleteLink" href="#">Delete</a>
+  <p id="message">&ensp;</p>
   <script type="module" src="/modules/requests/game/edit.js"></script>
 
   <footer>

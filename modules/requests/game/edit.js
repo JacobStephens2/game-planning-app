@@ -12,6 +12,8 @@ const updateUISuccess = function (data) {
   document.querySelector('input#title').value = parsedData.title;
   document.querySelector('h1').innerText = parsedData.title;
   document.querySelector('title').innerText = parsedData.title;
+  document.querySelector('#deleteLink').href = "/views/game/delete?id=" + parsedData.id;
+
 }
 
 let readEndpoint = apiHostname + '/game/read?id=' + id;
@@ -33,7 +35,7 @@ document.querySelector('input[type="submit"][value="Update"]').addEventListener(
 
   const updateWithResponse = function (data) {
     const parsedData = JSON.parse(data);
-    document.querySelector('form+p').innerText = parsedData.message;
+    document.querySelector('#message').innerText = parsedData.message;
     document.querySelector('h1').innerText = parsedData.title;
     document.querySelector('title').innerText = parsedData.title;
   }
