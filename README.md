@@ -1,6 +1,8 @@
-# Game Planning App Front End
+# Game Planning App
 
 This app is destined to be a tool to help people plan games for events.
+
+This app uses the Game Planning API at https://api.gameplanning.site. Here is the API's repository: https://github.com/JacobStephens2/game-planning-api
 
 ## Favicons
 
