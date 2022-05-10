@@ -8,7 +8,7 @@ function logout() {
   let endpoint = apiHostname + '/logout';
 
   const updateUISuccess = function (data) {
-    window.location = 'views/login';
+    window.location = '/login';
   }
 
   const createRequest = function (url, succeed, fail) {

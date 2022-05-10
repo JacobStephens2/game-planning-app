@@ -5,7 +5,7 @@ import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
 } else {
-  window.location = '/views/login';
+  window.location = '/login';
 }
 
 // Read data on page load
@@ -23,6 +23,7 @@ let readEndpoint = apiHostname + '/game/read?id=' + id;
 
 var requestOptions = {
   method: 'GET',
+  credentials: 'include',
   redirect: 'follow'
 };
 
@@ -41,11 +42,12 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
     document.querySelector('#message').innerText = parsedData.message;
     document.querySelector('h1').innerText = "Deleted " + parsedData.title;
     document.querySelector('title').innerText = "Deleted " + parsedData.title;
-    window.location = '/views/games/read?message=' + encodeURIComponent('Deleted ') + encodeURIComponent(parsedData.title);
+    window.location = '/games/read?message=' + encodeURIComponent('Deleted ') + encodeURIComponent(parsedData.title);
   }
 
   var requestOptions = {
     method: 'POST',
+    credentials: 'include',
     redirect: 'follow'
   };
 

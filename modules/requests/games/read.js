@@ -5,7 +5,7 @@ import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
 } else {
-  window.location = '/views/login';
+  window.location = '/login';
 }
 
 let queryString = window.location.search;
@@ -37,7 +37,7 @@ const updateUISuccess = function (data) {
   for (let i in parsedData) {
     let li = document.createElement('li');
     li.innerHTML =
-      `<a href="views/game/edit?id=${parsedData[i].id}">` +
+      `<a href="/game/edit?id=${parsedData[i].id}">` +
       parsedData[i].title +
       `</a>`;
     document.querySelector('ul').append(li);

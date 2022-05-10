@@ -5,7 +5,7 @@ import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
 } else {
-  window.location = '/views/login';
+  window.location = '/login';
 }
 
 // Create on Create button click
@@ -16,7 +16,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    window.location = '/views/game/edit?id=' + parsedData.id;
+    window.location = '/game/edit?id=' + parsedData.id;
   }
 
   let endpoint = apiHostname + '/game/create';

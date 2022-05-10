@@ -5,7 +5,7 @@ import { updateUIError } from '/modules/exports/updateUIError.js';
 
 if (cookieMethods.getCookie('loggedIn') == 'true') {
 } else {
-  window.location = '/views/login';
+  window.location = '/login';
 }
 
 let endpoint = apiHostname + '/test/access';
