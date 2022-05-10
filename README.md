@@ -2,6 +2,8 @@
 
 This app is destined to be a tool to help people plan games for events.
 
+This app uses the Game Planning API at https://api.gameplanning.site
+
 ## Favicons
 
 This favicon was generated using the following font:
