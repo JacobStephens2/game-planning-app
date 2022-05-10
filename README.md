@@ -1,4 +1,4 @@
-# Game Planning App Front End
+# Game Planning App
 
 This app is destined to be a tool to help people plan games for events.
 
