@@ -16,7 +16,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
 
   const updateUISuccess = function (data) {
     const parsedData = JSON.parse(data);
-    window.location = '/game/edit?id=' + parsedData.id;
+    window.location = '/games/read';
   }
 
   let endpoint = apiHostname + '/game/create';
