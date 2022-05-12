@@ -12,4 +12,13 @@ document.querySelector('head').innerHTML = `
   <link rel="stylesheet" href="/styles/vendor/reminders.css">
   <link rel="stylesheet" href="/styles/style.css">
   <title>Page</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMLT3NJ32P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QMLT3NJ32P');
+  </script>
 `;
