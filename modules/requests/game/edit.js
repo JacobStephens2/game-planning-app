@@ -40,10 +40,7 @@ document.querySelector('input[type="submit"][value="Update"]').addEventListener(
   let updateEndpoint = apiHostname + '/game/update?id=' + id;
 
   const updateWithResponse = function (data) {
-    const parsedData = JSON.parse(data);
-    document.querySelector('#message').innerText = parsedData.message;
-    document.querySelector('h1').innerText = parsedData.title;
-    document.querySelector('title').innerText = parsedData.title;
+    window.location = '/games/read';
   }
 
   var formdata = new FormData();

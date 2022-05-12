@@ -15,7 +15,6 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
   data.title = document.querySelector('input#title').value;
 
   const updateUISuccess = function (data) {
-    const parsedData = JSON.parse(data);
     window.location = '/games/read';
   }
 
